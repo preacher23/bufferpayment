@@ -1,0 +1,21 @@
+server:
+  port: 9093
+
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka
+
+spring:
+  application:
+    name: payment-service
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/paymentdb
+    username: postgres
+    password: admin
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
